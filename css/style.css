@@ -29,15 +29,15 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 163, 163);
+    background: rgb(17, 17, 17);
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(39, 39, 39);
 }
 
 .navbar {

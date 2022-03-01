@@ -13,6 +13,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+    type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <header class='header'>
@@ -122,8 +124,8 @@
         <section class="section6" id="contact">
             <div class="container-contact">
                 <h2 class="title-section6">CONTACTO</h2>
-                <a href="milto:info@misitio.com" class="p-section6">info@misitio.com</a>
-                <a href="tel:914-123-456" class="p-section6">Tel: 914-123-456</a>
+                <a href="milto:info@misitio.com" target="_blank" class="p-section6">info@misitio.com</a>
+                <a href="tel:914-123-456" target="_blank" class="p-section6">Tel: 914-123-456</a>
             </div>
 
             <form class="form-index" action="">
@@ -138,9 +140,34 @@
 
     <footer>
         <p>&copy; 2022 hecho para POLONORTE</p>
-        <a href="https://gaston-artigau.netlify.app/">Creado por Gastón Artigau</a>
+        <a href="https://gaston-artigau.netlify.app/" target="_blank">Creado por Gastón Artigau</a>
     </footer>
 
     <script src="/index.js"></script>
+
+    <script>
+        $(function(){
+
+            $('a[href*=#]').click(function() {
+
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                    && location.hostname == this.hostname) {
+
+                        var $target = $(this.hash);
+
+                        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+                        if ($target.length) {
+
+                            var targetOffset = $target.offset().top;
+
+                            $('html,body').animate({scrollTop: targetOffset}, 2000);
+
+                            return false;
+                        }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

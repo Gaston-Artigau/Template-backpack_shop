@@ -117,6 +117,9 @@ main {
     visibility: visible;
     opacity: 1;
 }
+.user-select {
+    user-select: none;
+}
 
 /* menu hamburguesa */
 

@@ -224,6 +224,10 @@ main {
     .menuppal ul li a:hover{
         color:#333;
     }
+    .close {
+        bottom: -100%;
+        /* left: -100%; */
+    }
     .ul li a {
         font-size: 20px;
     }
@@ -312,9 +316,6 @@ main {
     }
     .navbar__link:hover {
         color: rgb(224, 224, 224);
-    }
-    #check:checked~ul {
-        left: 0;
     }
 }
 

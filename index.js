@@ -27,6 +27,8 @@
 
 // selector
 var menu = document.querySelector('.hamburger');
+var slider = document.querySelector('.eso')
+var slider1 = document.querySelector('.eso1')
 
 // method
 function toggleMenu (event) {
@@ -37,3 +39,45 @@ function toggleMenu (event) {
 
 // event
 menu.addEventListener('click', toggleMenu, false);
+
+
+function toggleClose(event) {
+  this.classList.toggle('close')
+  document.querySelector(".menuppal").classList.toggle("close")
+  event.preventDefault();
+}
+
+slider.addEventListener('click', toggleClose, false);
+
+
+
+function toggleAfterClose(event) {
+  this.classList.remove('close')
+  document.querySelector(".menuppal").classList.remove("close")
+  event.preventDefault();
+}
+
+menu.addEventListener('click', toggleAfterClose, false);
+
+
+// slider1
+
+function toggleClose(event) {
+  this.classList.toggle('close')
+  document.querySelector(".menuppal").classList.toggle("close")
+  event.preventDefault();
+}
+
+slider1.addEventListener('click', toggleClose, false);
+
+
+
+function toggleAfterClose(event) {
+  this.classList.remove('close')
+  this.classList.remove('is-active')
+  document.querySelector(".menuppal").classList.remove("is-active")
+  document.querySelector(".menuppal").classList.remove("close")
+  event.preventDefault();
+}
+
+menu.addEventListener('click', toggleAfterClose, false);

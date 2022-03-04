@@ -387,13 +387,18 @@ main {
 }
 @media (min-width: 480px) {
     .section1 {
-        padding: 130px 0;
+        padding: 150px 0;
     }
     .title {
         font-size: 46px;
     }
     .description {
         font-size: 22px;
+    }
+}
+@media (min-width: 680px) {
+    .section1 {
+        padding: 200px 0;
     }
 }
 

@@ -71,13 +71,12 @@ function toggleClose(event) {
 slider1.addEventListener('click', toggleClose, false);
 
 
+// function toggleAfterClose(event) {
+//   this.classList.remove('close')
+//   this.classList.remove('is-active')
+//   document.querySelector(".menuppal").classList.remove("is-active")
+//   document.querySelector(".menuppal").classList.remove("close")
+//   event.preventDefault();
+// }
 
-function toggleAfterClose(event) {
-  this.classList.remove('close')
-  this.classList.remove('is-active')
-  document.querySelector(".menuppal").classList.remove("is-active")
-  document.querySelector(".menuppal").classList.remove("close")
-  event.preventDefault();
-}
-
-menu.addEventListener('click', toggleAfterClose, false);
+// menu.addEventListener('click', toggleAfterClose, false);
